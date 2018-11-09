@@ -10,4 +10,14 @@ class Animal
     @admission_date = options['admission_date']
   end
 
+  def save()
+      sql = "INSERT INTO animals
+      (name, type, admission_date)
+      VALUES ($1, $2, $3)
+      RETURNING id"
+      values = [@name, @type, @admission_date]
+      results = SqlRunner.run(sql, values)
+      @id = results.first()['id'].to_i
+    end
+
 end
