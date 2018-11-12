@@ -10,7 +10,7 @@ class TestAnimal < MiniTest::Test
     @animal = Animal.new(options)
   end
 
-  def test_name
+  def test_animal_name
     result = @animal.name
     assert_equal("Lossoth", result)
   end
@@ -24,4 +24,6 @@ class TestAnimal < MiniTest::Test
     result = @animal.admission_date
     assert_equal("21/06/18", result)
   end
+
+  
 end
