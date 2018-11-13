@@ -4,7 +4,7 @@ require_relative("../owner")
 class TestOwner < MiniTest::Test
 
   def setup
-    options = {'name' => 'Maria'}
+    options = {'name' => 'Maria', 'wanting' => 'Dog'}
 
     @owner = Owner.new(options)
   end
@@ -13,4 +13,10 @@ class TestOwner < MiniTest::Test
     result = @owner.name
     assert_equal('Maria', result)
   end
+
+  def test_owner_wants_pet_type
+    result = @owner.wanting
+    assert_equal('Dog', result)
+  end
+
 end

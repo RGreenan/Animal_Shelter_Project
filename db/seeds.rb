@@ -5,7 +5,9 @@ require_relative('../models/adoption')
 # ANIMALS
 animal1 = Animal.new({
   'name' => 'Lossoth',
-  'type' => 'Labrador',
+  'type' => 'Dog',
+  'breed' => 'Labrador',
+  'adoptable' => 'Yes',
   'admission_date' => '21/06/18'
   })
 animal1.save
@@ -14,21 +16,27 @@ animal1.update
 
 animal2 = Animal.new({
   'name' => 'Hector',
-  'type' => 'Ragdoll',
+  'type' => 'Cat',
+  'breed' => 'Ragdoll',
+  'adoptable' => 'No',
   'admission_date' => '1/11/18'
   })
 animal2.save
 
 animal3 = Animal.new({
   'name' => 'Granfalloon',
-  'type' => 'French Bulldog',
+  'type' => 'Dog',
+  'breed' => 'French Bulldog',
+  'adoptable' => 'No',
   'admission_date' => '10/11/18'
   })
 animal3.save
 
 animal4 = Animal.new({
   'name' => 'Lucille',
-  'type' => 'British Shorthair',
+  'type' => 'Cat',
+  'breed' => 'British Shorthair',
+  'adoptable' => 'Yes',
   'admission_date' => '6/10/18'
   })
 animal4.save
@@ -36,17 +44,20 @@ animal4.save
 
 # OWNERS
 owner1 = Owner.new({
-  'name' => 'Maria'
+  'name' => 'Maria',
+  'wanting' => 'Dog'
   })
 owner1.save
 
 owner2 = Owner.new({
-  'name' => 'Carl'
+  'name' => 'Carl',
+  'wanting' => 'Cat'
   })
 owner2.save
 
 owner3 = Owner.new({
-  'name' => 'Sophie'
+  'name' => 'Sophie',
+  'wanting' => 'Dog'
   })
 owner3.save
 
@@ -59,7 +70,7 @@ adoption1 = Adoption.new({
 adoption1.save
 
 adoption2 = Adoption.new({
-  'animal_id' => animal2.id,
+  'animal_id' => animal4.id,
   'owner_id' => owner2.id
   })
 adoption2.save

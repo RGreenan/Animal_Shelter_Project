@@ -7,13 +7,23 @@
       <th></th> <!--BLANK SPACE -->
       <th>Type</th>
       <th></th><!--BLANK SPACE -->
+      <th>Breed</th>
+      <th></th>
+      <th>Adoptable</th>
+      <th></th>
       <th>Admission Date</th>
     </tr>
+
     <% for animal in @animals %>
+
     <tr>
       <td><a href="/animals/<%= animal.id %>"><%= animal.name %></a></td>
       <td>||</td>
       <td><%= animal.type %></td>
+      <td>||</td>
+      <td><%= animal.breed%></td>
+      <td>||</td>
+      <td><%= animal.adoptable%></td>
       <td>||</td>
       <td><%= animal.admission_date %></td>
     </tr>
