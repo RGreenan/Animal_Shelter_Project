@@ -19,6 +19,12 @@ class Owner
     @id = results.first()['id'].to_i
   end
 
+  def Owner.all()
+    sql = "SELECT * FROM owners"
+    results = SqlRunner.run(sql)
+    return results.map { |owner| Owner.new (owner)}
+  end
+
   # def update()
   #   sql = "UPDATE owners SET (name)
   #   =($1)

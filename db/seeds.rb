@@ -19,6 +19,20 @@ animal2 = Animal.new({
   })
 animal2.save
 
+animal3 = Animal.new({
+  'name' => 'Granfalloon',
+  'type' => 'French Bulldog',
+  'admission_date' => '10/11/18'
+  })
+animal3.save
+
+animal4 = Animal.new({
+  'name' => 'Lucille',
+  'type' => 'British Shorthair',
+  'admission_date' => '6/10/18'
+  })
+animal4.save
+
 
 # OWNERS
 owner1 = Owner.new({
@@ -30,6 +44,11 @@ owner2 = Owner.new({
   'name' => 'Carl'
   })
 owner2.save
+
+owner3 = Owner.new({
+  'name' => 'Sophie'
+  })
+owner3.save
 
 
 # ADOPTIONS

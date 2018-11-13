@@ -6,10 +6,10 @@ also_reload( '../models/*' )
 
 get '/animals/' do
   @animals = Animal.all()
-  erb ( :"animals/show" )
+  erb ( :"animals/index" )
 end
 
-# get '/victims/:id' do
-#   @victim = Victim.find(params['id'].to_i)
-#   erb( :"victims/show" )
-# end
+get '/animals/:id' do
+  @animals = Animal.find(params['id'].to_i)
+  erb(:"animals/show")
+end

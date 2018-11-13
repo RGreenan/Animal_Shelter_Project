@@ -1,0 +1,15 @@
+<p>Owner index page</p>
+
+<!-- OWNER TABLE HERE-->
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th> <!--BLANK SPACE -->
+  </tr>
+  <% for owner in @owners %>
+  <tr>
+    <td><a href="/animals/<%= owner.id %>"><%= owner.name %></a></td>
+    <td>||</td>
+  </tr>
+  <% end %>
+</table>

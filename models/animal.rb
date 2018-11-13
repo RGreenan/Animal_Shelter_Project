@@ -35,4 +35,12 @@ class Animal
     return results.map { |animal| Animal.new( animal ) }
   end
 
+  def Animal.find( id ) #find individual animal
+    sql = "SELECT * FROM animals
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return Animal.new( results.first )
+  end
+
 end
