@@ -1,6 +1,10 @@
-<p>Owner index page</p>
+<br>
+<a href="/owners/new/">Register a new owner</a>
+<br><br>
+<!-- PROBABLY NO NEED FOR A TABLE FOR OWNERS......-->
+<hr>
 
-<!-- PROBABLY NO NEED IN A TABLE FOR OWNERS......-->
+<h3>Current Owner list</h3>
 <table>
   <tr>
     <th>Name</th>
@@ -9,10 +13,16 @@
   </tr>
   <% for owner in @owners %>
   <tr>
-    <td><a href="/owners/<%= owner.id %>"><%= owner.name %></a></td>
+    <td><%= owner.name %></td>
     <td>||</td>
-    <td><a><%= owner.wanting %></a></td>
+    <td><%= owner.wanting %></td>
     <td>||</td>
+
+    <td>
+      <form action="/owners/<%= owner.id %>/delete" target="_self" method="delete">
+        <input type="submit" value="Delete"/>
+      </form>
+    </td>
   </tr>
   <% end %>
 </table>

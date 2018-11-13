@@ -19,4 +19,6 @@ class TestOwner < MiniTest::Test
     assert_equal('Dog', result)
   end
 
+# test for 'delete' needed??
+
 end
