@@ -13,3 +13,10 @@ get '/animals/:id' do
   @animals = Animal.find(params['id'].to_i)
   erb(:"animals/show")
 end
+
+
+# Not working..
+# get'/animals/:type' do
+#   @animals = Animal.find(params['type'])
+#   erb(:"animals/breeds")
+# end

@@ -12,7 +12,7 @@ class Owner
 
   def save()
     sql = "INSERT INTO owners
-    (name)
+    (name, wanting)
     VALUES ($1, $2)
     RETURNING id"
     values = [@name, @wanting]

@@ -5,10 +5,13 @@
   <tr>
     <th>Name</th>
     <th></th> <!--BLANK SPACE -->
+    <th>Pet Wanted</th>
   </tr>
   <% for owner in @owners %>
   <tr>
     <td><a href="/owners/<%= owner.id %>"><%= owner.name %></a></td>
+    <td>||</td>
+    <td><a><%= owner.wanting %></a></td>
     <td>||</td>
   </tr>
   <% end %>
