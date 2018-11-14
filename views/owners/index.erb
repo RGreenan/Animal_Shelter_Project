@@ -19,7 +19,12 @@
     <td>||</td>
     <td><%= owner.wanting %></td>
     <td>||</td>
-    <td>
+    <td> <!-- EDIT button -->
+      <form action="/owners/<%= owner.id %>/edit" method="get">
+        <input type="submit" value="Edit"/>
+      </form>
+    </td>
+    <td> <!-- DELETE button -->
       <form action="/owners/<%= owner.id %>/delete" method="post">
         <input type="submit" value="Delete"/>
       </form>

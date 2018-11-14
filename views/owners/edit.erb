@@ -1,0 +1,15 @@
+<p>Edit Owner</p>
+<form action="/owners/<%= @owners.id %>" method="post"> 
+
+  <div class="form-el">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= @owners.name %> "/>
+  </div>
+
+  <div class="form-el">
+    <label for="wanting">Pet Wanted:</label>
+    <input type="text" name="wanting" value="<%= @owners.wanting %> "/>
+  </div>
+
+  <input type="submit" value="Save"/>
+</form>

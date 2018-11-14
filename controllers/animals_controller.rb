@@ -27,6 +27,19 @@ get '/animals/:id' do
   erb(:"animals/show")
 end
 
+# EDIT
+get '/animals/:id/edit' do
+  @animals = Animal.find(params[:id])
+  erb(:"animals/edit")
+end
+
+# UPDATE #to fix
+post 'animals/:id' do
+  animal = Animal.new(params)
+  animal.update
+  redirect to '/animals/'
+end
+
 # DESTROY
 post '/animals/:id/delete' do
   animal = Animal.find(params['id'])

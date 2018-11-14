@@ -22,15 +22,22 @@ post '/owners/' do
   redirect to '/owners/'
 end
 
-# SHOW
-get '/owners/:id' do
-  @owners = Owner.find(params['id'].to_i)
-  erb(:"owners/show")
-end
+# SHOW (Don't need - using 'index' to show owners)
 
 # EDIT
+get '/owners/:id/edit' do
+  @owners = Owner.find(params[:id])
+  erb(:"owners/edit")
+end
 
-# DESTROY
+# UPDATE
+post '/owners/:id' do
+  owner = Owner.new(params)
+  owner.update
+  redirect to '/owners/'
+end
+
+# DESTROY # can delete any owners not included in 'adoptions' table!!
 post '/owners/:id/delete' do
   owner = Owner.find(params['id'])
   owner.delete

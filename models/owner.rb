@@ -40,11 +40,13 @@ class Owner
     values = [@id]
     SqlRunner.run(sql, values)
   end
-  # def update()
-  #   sql = "UPDATE owners SET (name)
-  #   =($1)
-  #   WHERE id = $2"
-  #   values = [@name, @id]
-  #   SqlRunner.run(sql, values)
-  # end
+
+  def update()
+    sql = "UPDATE owners SET (name, wanting)
+    =($1, $2)
+    WHERE id = $3"
+    values = [@name, @wanting, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
