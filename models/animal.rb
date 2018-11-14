@@ -34,7 +34,7 @@ class Animal
   def Animal.all()
     sql = "SELECT * FROM animals"
     results = SqlRunner.run( sql )
-    return results.map { |animal| Animal.new( animal ) }
+    return results.map { |animal| Animal.new(animal) }
   end
 
   def Animal.find( id ) #find individual animal

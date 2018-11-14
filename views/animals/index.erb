@@ -31,10 +31,12 @@
       <td><%= animal.adoptable%></td>
       <td>||</td>
       <td><%= animal.admission_date %></td>
+      <td>||</td>
       <td> <!-- EDIT button -->
         <form action="/animals/<%= animal.id %>/edit" method="get">
           <input type="submit" value="Edit"/>
         </form></td>
+        <td>/</td>
       <td>
         <form action="/animals/<%= animal.id %>/delete" method="post">
           <input type="submit" value="Delete"/>
