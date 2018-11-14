@@ -11,15 +11,16 @@
     <th></th> <!--BLANK SPACE -->
     <th>Pet Wanted</th>
   </tr>
+
   <% for owner in @owners %>
+
   <tr>
     <td><%= owner.name %></td>
     <td>||</td>
     <td><%= owner.wanting %></td>
     <td>||</td>
-
     <td>
-      <form action="/owners/<%= owner.id %>/delete" target="_self" method="delete">
+      <form action="/owners/<%= owner.id %>/delete" method="post">
         <input type="submit" value="Delete"/>
       </form>
     </td>

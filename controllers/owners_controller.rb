@@ -30,7 +30,7 @@ end
 
 # EDIT
 
-# DESTROY (DOESN'T WORK!!)
+# DESTROY
 post '/owners/:id/delete' do
   owner = Owner.find(params['id'])
   owner.delete

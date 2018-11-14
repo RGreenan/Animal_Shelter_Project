@@ -34,7 +34,7 @@ class Owner
     return Owner.new( results.first )
   end
 
-  def self.delete()
+  def delete()
     sql = "DELETE FROM owners
     WHERE id = $1"
     values = [@id]
