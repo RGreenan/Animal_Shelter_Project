@@ -34,7 +34,7 @@ get '/animals/:id/edit' do
 end
 
 # UPDATE #to fix
-post 'animals/:id' do
+post '/animals/:id' do
   animal = Animal.new(params)
   animal.update
   redirect to '/animals/'
